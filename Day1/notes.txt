@@ -250,6 +250,60 @@ int[] a = new int[] {1,55,23,22,88,90};
 			System.out.println(i);
 		}
 
+foreach loop implements the Enumeration collection, at first i points to the 
+first Element in Array A, after processing first Element, it checks next element
+is there or not by using hasMoreElements(), if hasMoreElements() returns true,
+then it moves to next element by using nextElement(), it repeats as soon as
+hasMoreElements() returns true. 
+
+In java, strings are immutable, means once they are assigned we cannot change the value by using 
+any string methods. 
+
+
+There are 2 types of memories as 
+
+	(i) STACK
+	(ii) HEAP
+
+value types will be stored in STACK memory and reference types will be 
+stored in HEAP memory. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
