@@ -1,0 +1,197 @@
+Boxing and Unboxing : 
+
+The concept of converting value types to reference types known as
+boxing, and reference types to value types known as unboxing. 
+
+Object is type, that which can be used for boxing and unboxing. 
+
+int a;
+
+ a="Hello";
+ a=12;
+ a=12.5;
+
+Object a;
+
+a="Hello";
+a=12;
+a=12.5;
+
+In Object type, we can store any type as 
+
+	-> Value Type
+
+	-> Reference Type
+
+	-> Custom Type
+
+java.lang is the default package in java
+
+Object is the top level class in java. 
+
+	-> hashCode() 
+
+	-> getClass() 
+
+	-> toString() : Used to display the member variable values of the class. 
+
+	It returns String type, and it will be called automatically once you
+	print the object. 
+
+	
+Method overloading : 
+____________________
+
+	The concept of using the same method name w.r.t. Different data types of different parameters known as 
+method overloading. Here, the method name must be same, but no.of parameters or type of parameters we are passing are different. 
+
+
+class Hello {
+   int a,b;
+   a=5;
+   b=7;
+}
+
+A constructor is a special member, which used to initialize the member variables
+of the class, it is special because it has the same name as that of class name.
+
+Rules : 
+_______
+
+	It will not contains any return type
+	
+	It will not return any value
+
+	It will be invoked automatically once the instance of the class created
+	
+	A constructor can be overloaded. 
+
+Types of Constructors : 
+
+There are 2 types of constructors known as
+
+	(i) static constructors : These are called class constructors, which are 
+		used to initialize the static variables of the class. These 
+		constructors are invoked automatically before control reaches the
+		entry point. These constructors cannot be overloaded. 
+	
+	*** In java, we dont have static constructors, we can use static { } as
+		static constructor ***
+
+	(ii) instance constructors : These are the constructors that which are 
+		invoked automatically once the instance of the class created. 
+		These constructors can be overloaded. 
+	
+static : These are the variables, that which retains values irrespective of type of
+object. 
+
+static methods : These are the methods that which are to be called by using
+class name, no object required to call these methods. 
+
+Inheritance : The concept of deriving a new class from already existing class known as inheritance, the class
+which derived known as derived class, the class from which its derived known as base class. Through inheritance we can reduce the size of the program. 
+
+class First {
+...
+...
+}
+
+class Second extends First {
+...
+...
+...
+}
+
+Once you create an object to Second class, you can access all public/protected and friendly members of First class. 
+
+super keyword : If you want to pass values from derived class to base class, then we need the help of super keyword. It has 2 forms as 
+
+	(i) super as a keyword
+	(ii) super as a constructor 
+
+
+Abstract Class : 
+_________________
+
+A class that which can be created, but not implemented and instantiated known as
+abstract class. Abstract class contains abstract and non-abstract methods. 
+Abstract methods needs to be overrided mandetorily by the derived class. 
+
+
+abstract class class_name
+{
+   abstract method1();
+   abstract method2();
+}
+
+interface : Java does not support the concept of multiple inheritance, to achieve this we need the help of interfaces. An interface contains method declaration, and the implementation can be done in the corresponding class, you can add more than one interface to the particular class. 
+
+Difference between interface and abstract class 
+________________________________________________
+
+1) An abstract class contains both abstract and non-abstract methods, where interface contains only abstract methods. 
+
+2) Interface methods are public and abstract by default. 
+
+3) Multiple Inheritance can be achieved by using interfaces. 
+
+4) An interface can be called from anywhere to anywhere. 
+
+interface interface_name {
+...
+...
+...
+}
+
+class class_name implements interface_name {
+...
+...
+...
+}
+
+final keyword : 
+
+Which never allows any modifications as used to define the constants. 
+
+final variable data cannot be changed
+
+final class cannot be inherited
+
+final method cannot be overrided. 
+
+void show(int x) {
+....
+....
+}
+
+show();
+show(12);
+show(12,5);
+show(12,5,23);
+
+varargs : Used to pass varying arguments to the methods from zero to n arguments. 
+You can define varargs by using (...)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
