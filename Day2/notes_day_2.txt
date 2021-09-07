@@ -172,6 +172,84 @@ show(12,5,23);
 varargs : Used to pass varying arguments to the methods from zero to n arguments. 
 You can define varargs by using (...)
 
+Exception Handling : 
+____________________
+
+It is a mechanism of handling the runtime errors. 
+
+There are 2 types of errors known as 
+
+	(i) Compile-Time
+
+	(ii) Runtime 
+
+Compile time errors JVM will take care of it, 
+runtime errors, during runtime if we pass invalid values, the type of errors
+we are getting are known as runtime errors. By using Exception Handling, we can 
+overcome the runtime errors. 
+
+To handle errors we have 3 blocks as 
+
+1) try block : this block contains statements in which there is possibility of getting runtime errors. The statements which are placed in this block are treated as heavy weighted statements as JVM allocates excess memory to them. 
+
+2) catch block : Once exception raised in try block then control will be forwared to catch block, this block
+contains the alternate statements for exceptions raised in try block. One try block can contains multiple catch blocks. 
+
+3) finally block : This block contains statements that needs to be executed mandetorily irrespective of try 
+and catch blocks. This block is not mandetory, but all the statements which are placed in this block are 
+executed as mandetory statements. 
+
+Exception is the top most class from which all kinds of exceptions are derived. 
+
+syntax : 
+________
+
+try {
+...
+...
+...
+} catch (Exception e ) {
+...
+...
+...
+} finally {
+....
+....
+....
+}
+
+printStackTrace() -> Used to display entire information about the errors.
+
+Types of Exceptions :
+_____________________
+
+There are 2 types of exceptions known as
+
+	(i) Checked Exceptions : These are the exceptions that which occurs at compile time, during compilation JVM feels some erroneous code is there, and stops the execution at compile time, and can be handled at method level by using throws keyword.
+	
+	(ii) Unchecked Exceptions : These are the exceptions that which occurs at runtime, and can be handled by using tradional try...catch block. 
+
+SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+format() : Converts date to string.
+
+parse() : used to convert string to date. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
