@@ -1,0 +1,96 @@
+Checked Exceptions are exceptions that which are to be raised at compile time, during compilation JVM feels some erroneous code is there and stops the execution at compile time, can be handled at method level by using
+throws keyword. 
+
+throw keyword : If you want to throw the errors based on the condition, then 
+we need the help of throw keyword. 
+
+throw used to throw an object. 
+
+Write a program as accept a number, if number < 0 then throw 
+ArithmeticException, if number = 0 then throw NumberFormatException
+else print the value. 
+
+You can create custom exception by using Exception class, any class that 
+which derived from exception can be treated as custom exception. 
+
+System Exceptions are inadequate to handle all the situations, then we 
+need the help of custom exceptions. 
+
+Write a Program as Sum of 2 numbers, if any number < 0 then throw 
+NegativeException, if any number = 0 then throw 
+NumberZeroException. 
+
+Task : 
+_______
+
+Write a Program to Read emailAddress and check its valid or not 
+
+	-> If '@' not there then throw InvalidEmailException
+
+	-> if useName contains more than 12 characters then throw InvalidUserException
+
+		Before @ what comes that is UserName
+		If no error, print the email address. 
+
+else print the email address. 
+
+Collections : 
+______________
+
+Arrays are static data structures, means once size assigned we cannot change the values, but if you want to add the elements without size specification continuously, then we need the help of collections. 
+
+collections are from java.util package. 
+
+Scanner : Allows you to read the custom input. 
+
+Scanner sc = new Scanner(System.in);
+
+next() -> used to read one word. 
+
+nextLine() -> Used to read one line of input 
+
+nextInt() -> Used to read the integer
+
+nextDouble() -> Used to read double value
+
+
+Properties : 
+
+Allows you to represent methods as a fields. 
+If you want to control the internal behaviour of the specific entity, then we need
+the help of properties. 
+
+ArrayList is falling under List interface. 
+
+If you want to represent value types as Classes, those are called wrapper classes. 
+
+int x=12;
+
+The above one need to reprent as class, then 
+
+Integer x = new Integer(12);
+
+
+Set interface allows you to remove the duplicate elements from the given collection.
+
+HashSet and LinkedHashSet are falling under Set interface. 
+
+SortedSet : Used to display the values in sorted order. 
+
+TreeSet is class falling under SortedSet interface. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
