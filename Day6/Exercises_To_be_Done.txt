@@ -1,0 +1,29 @@
+Exercises : 
+___________
+
+
+1) Display the last occurrence of given char in a string 
+Ex: 
+word 'hello' char 'l' exists 2 times display position of last occurrence 
+
+2) Display all names of Emp table in sentence case means (first char capital and remining are lower case)
+
+3) Take fullName and Split into FirstName and LastName means
+
+'Gowtham Sekar' 
+
+FirstName : Gowtham
+LastName : Sekhar
+
+4) In Word 'misissipi' count no.of i's
+
+5) Display the first Day of the previous month
+
+6) Display last day of the year
+
+7) Display DayName of last day of current month
+
+8) Add 5 years 10 months and 6 days to the given date
+
+9) Display all fridays of current month.
+
