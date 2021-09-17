@@ -1,0 +1,51 @@
+Joins : 
+______
+
+Allows you to access data from more than one table. 
+
+There are various types of joins as 
+
+	(i) Inner Join : Acts as an intersect operator, used to extract only the common records from the
+			  given table(s). 
+
+		
+	
+	(ii) Outer Join : There are various types of outer joins as 
+
+		-> Left Outer Join
+
+			All records from the Left-side table and matching records from the right side table.
+
+		-> Right Outer Join 
+
+			All records from the right-side table and matching records from the left-side table. 
+
+	(iii) Cross Join : Generates cartician product of two given tables. 
+
+		Table A contains n records and Table b contains m records, then it generates (n*m) records.
+
+	(iv) Self Join : IF a table joins with itself, known as self join. 
+
+
+
+Subquery : 
+___________
+
+	Sometimes, its not possible to access data by using single SQL statement, For this, we need the help of subqueries. A subquery is a query, that which is having another query inside, the query which is inside known as inner query, the query which is outside known as outer query. Everytime, the result of the inner query will be send as input to the outer query. 
+
+
+-- Display the max. salary 
+
+select max(sal) from Emp;
+
+Display the name of the person who is getting max. salary 
+
+If subquery returns more than one value, then we can retrieve data by using either 
+ALL or ANY operators. 
+
+ALL acts as AND operator
+
+ANY acts as OR Operator. 
+
+
+
