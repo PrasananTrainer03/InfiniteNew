@@ -22,11 +22,12 @@ public class LeaveDAO {
 				EmployDAO dao = new EmployDAO();
 				Employee employee = dao.searchEmploy(empId);
 				int mgr = employee.getMgrId();
-				
+				System.out.println(mgr);
+				System.out.println(mgrId);
 				if (mgr==mgrId) {
 					if (status.toUpperCase().equals("YES")) {
 						connection = ConnectionHelper.getConnection();
-						String cmd = "Update leave_history set LEAVE_STATUS=? AND "
+						String cmd = "Update leave_history set LEAVE_STATUS=?, "
 								+ " LEAVE_MNGR_COMMENTS=? where "
 								+ "Leave_ID=?";
 						pst = connection.prepareStatement(cmd);
@@ -37,7 +38,7 @@ public class LeaveDAO {
 						return "Leave Approved...";
 					} else {
 						connection = ConnectionHelper.getConnection();
-						String cmd = "Update leave_history set LEAVE_STATUS='DENIED' AND"
+						String cmd = "Update leave_history set LEAVE_STATUS='DENIED', "
 								+ " LEAVE_MNGR_COMMENTS=? where Leave_ID=?";
 						pst = connection.prepareStatement(cmd);
 						pst.setString(1, managerComments);
