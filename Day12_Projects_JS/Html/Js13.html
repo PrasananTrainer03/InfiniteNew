@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        var questions = new Array(
+            "1. C Language Invented By",
+            "2. COBOL stands for",
+            "3. Javascript is Scripting Language (Yes/No) ",
+            "4. Java is Object Oriented (Yes/No)",
+            "5. Java contains Object as top level (Yes/No)"
+        );
+        var questionNo=0;
+        var totalQuestions = questions.length;
+        function load() {
+            document.getElementById("question").innerHTML=questions[questionNo];
+        }
+        function next() {
+            questionNo++;
+            if (questionNo == totalQuestions) {
+                alert("No Questions after this...");
+                questionNo=totalQuestions - 1;
+            }
+            load();
+        }
+        function previous() {
+            questionNo--;
+            if (questionNo < 0) {
+                questionNo=0;
+                alert("No Questions Before this...");
+            }
+            load();
+        }
+    </script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body onload="load()">
+    <p id="question"></p>
+    <br/><br/>
+    <input type="button" value="Next" onclick="next()" /> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="button" value="Previous" onclick="previous()" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</body>
+</html>
