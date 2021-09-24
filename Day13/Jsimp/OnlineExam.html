@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="OnlineExam.js"></script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body onload="loadQuestion()">
+    <p style="color: #33CCFF;font-family:
+     'DejaVu Sans';font-size:60px;font-weight:bold">
+     Online Exam @ Hackthon</p>
+     <div style="background : none repeat scroll 0 0 #3366CC;border:5px solid gray;
+     color : white; font-family : 'DejaVu Sans',Times,Serif;
+font-weight : bold;
+margin : 10px auto;
+padding : 10px;
+width : 400px;">
+<br/><br/>
+ <form name = "ExamForm" id = "inputForm1" action = "" method = "GET">
+         <p id = "Question">
+             This is the question
+         </p>
+     
+         <input type = "radio" name = "OptionR" id = "Opt1" onClick = "AnswerChoosed(1)"/>
+         <label id = "Option0" name = "Name1" >1st Option</label><br />
+         <input type = "radio" name = "OptionR" id = "Opt2" onClick = "AnswerChoosed(2)"/> 
+         <label id = "Option1">2nd Option</label><br />
+         <input type = "radio" name = "OptionR" id = "Opt3" onClick = "AnswerChoosed(3)"/> 
+         <label id = "Option2">3rd Option</label><br />
+         <input type = "radio" name = "OptionR" id = "Opt4" onClick = "AnswerChoosed(4)"/> 
+         <label id = "Option3">4th Option</label><br />
+         <br />
+         <br />
+         <input type = "button" value = "Next" onClick = "nextQuestion()">
+ </form>		
+</div>
+</body>
+</html>
