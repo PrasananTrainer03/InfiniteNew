@@ -1,0 +1,103 @@
+Testing 
+
+It is a process of identifying the defects in the given program and fix them, at last you need to deliver the defect free application to the client. 
+
+There are various types of testings as
+
+	1) Manual Testing
+
+	2) Automation Testing 
+
+
+Unit Testing : Can be done by the developers, in that each and every single line of the code needs to be tested thoroughly, and the test case document is providing the proof that we tested our code. 
+
+Till the time, we are running the java code and its 40% over only, as we need to check all corner case scenarios at last we have to fix them then only we say the code working fine. 
+
+
+1) Defect : If a tester identifies something, known as defect. 
+
+2) Bug : If the programmer accepts the defect, known as bug. 
+
+*** All defects are not bugs, but all bugs are defects ***
+
+How to implement Unit testing in java, 
+
+You can implement them by using JUNIT. 
+
+Junit is a platform, that which allows you to implement unit testing in the given application. 
+
+To start with, we need to make a maven project. 
+
+Once you make any maven project, it makes 2 sections as 
+
+	main
+	test
+
+main -> Contains actual business logic
+
+test -> Contains all the test cases. 
+
+How to start with test-case 
+
+First in pom.xml file please add/modify the depenency. 
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+
+
+The vesion number changes based on the priority. 
+
+
+To start with junit test case create a class 
+
+and in that class, all test cases will be prefixed with @Test annotation. 
+
+If you don't give  @Test annotation, then no compile time error, but it will not consider that code as 
+Test Case. 
+
+
+To start with unit testing, we need to use 
+
+import org.junit.Test;
+
+How to create a maven project for junit 
+
+
+To assert values in junit, we have built-in methods as
+
+assertEquals -> checks the values 
+
+	assertEquals(expected,actual)
+
+assertTrue
+
+asserFalse
+
+assertNull
+
+assertNotNull
+
+In Junit we have predefined annotations as
+
+@BeforeClass
+
+	This is the static method, which will be called before starting unit testing. This code will be executed only once. 
+
+
+
+@Before : this code will be executed everytime, then test case executed. Means if we have 5 test cases
+for every test case this method will be fired. 
+
+
+
+@AfterClass : This is static method, will be executed only once, before closing the test case. 
+
+@After : This annotation contains code, that needs to be executed everytime at the end of each test case. 
+
+
+
+

@@ -1,0 +1,49 @@
+CSS (Cascading Style Sheet) 
+
+    Allows you to make look and feel for the given document. 
+
+Allow you to design the page w.r.t. Proper ui and we have lot of properties to implement them. 
+
+How to start with CSS
+
+There are 2 types of CSS files as 
+
+(i) internal CSS
+
+	The CSS code and html will be present in same page. 
+
+(ii) external CSS
+
+	CSS file will be separate and html file will be separate. 
+
+to call the external css file in the given html document, we need 
+
+<link type="text/css" rel="stylesheet" href="filename.css" /> 
+
+
+
+If you want to use one css file across multiple pages, then we need the help of external CSS. 
+
+
+To start with CSS, we need the help of 
+
+<style>
+
+</style>
+
+In old versions, we need to tell explictily about styling. 
+
+But after improvements, by default <style> tag takes css as default language. 
+
+
+
+
+
+
+
+
+
+
+
+
+
