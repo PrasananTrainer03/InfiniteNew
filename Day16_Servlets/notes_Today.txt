@@ -1,0 +1,39 @@
+Prototype design pattern ensures cloing of an existing object instead of creating new one and can also be customized as per the requirement. 
+
+If ensures, i want to capture all values of one object properties into another, as without creating again and assigning the values again, that situation we need the help of prototype. 
+
+
+
+If cost of creating a new object is expensive and resource intensive. 
+
+___________________________________________________________________________________
+
+Web Application : 
+__________________
+
+These are the applications, that which are to be called from various places rather
+than where they are created. 
+
+If you want to make any distributed or robust applications, then we need the help 
+of web applications. 
+
+You can create web applications in 2 ways as 
+
+	(i) Scripting Languages
+
+	(ii) Programming Languages 
+
+Scripting Languages are langauges that which are interpreted, during runtime they takes
+lot of time to execute. 
+
+Programming languages are langauges, that which are compiled first, during runtime they takes
+very less time to execute. 
+
+
+In java, we can make web applications by using 
+
+Servlets 
+
+PrintWriter : Allows you to display values in any given environment. 
+
+
