@@ -1,0 +1,45 @@
+
+JSP (Java Server Pages)
+
+Jsp allows you to write both HTML and Java code in a same page. 
+
+JSP file after compilation it generates servlet. 
+
+What are the jsp tags available.
+
+<%
+
+%> : Scriptlet tag, that which allows you to write java code in jsp.
+
+<%@ Page %> : This directive allows you to import any packages to the given page. 
+
+<%@ page import="java.util.List" %>
+
+<%= %> : Expressions, used to display any values. 
+
+int x=12;
+
+<%=x%>
+
+<%!
+
+%> : used for declarations. 
+
+Intrinsic objects : 
+___________________
+
+
+out -> Used to print values. 
+
+response -> Used to get the response from the server
+
+request -> Used to get values from the keyboard. 
+
+Session -> Used to create a session. 
+
+If you want to redirect to the target page, then we need 
+
+<jsp:forward> : used to redirect to the target page. 
+
+<jsp:include> : used to include the exiting page in the current page. 
+
