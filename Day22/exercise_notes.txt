@@ -1,0 +1,61 @@
+Abstract class 
+
+A class that which can be created, but not implemented and instantiated known as abstract class. 
+
+Abstract class contains abstract and non-abstract methods, only abstract methods needs to be overrided by the derived class. 
+
+Interface :
+
+	Java does not support the concept of multiple inheritance, to achieve this we need
+the help of interfaces. An interface contains method declaration, and the 
+implementation can be done in the corresponding class, you can add more than 
+one interface to the particular class. 
+
+differences :
+______________
+
+An abstract class contains both abstract and non-abstract methods, where interface contains only abstract methods. 
+
+Interface methods are public and abstract by default. 
+
+Multiple Inheritance can be achieved by using interface. 
+
+An interface can be called from anywhere to anywhere. 
+
+
+____________________________________________________
+
+Beans 
+
+   implement 
+
+	CreateAccount
+	SearchAccount
+	CloseAccount
+
+
+JSTL
+   
+   implement
+
+	CreateAccount
+	SearchAccount
+	DepositAccount
+	WithdrawAccount
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
