@@ -3,17 +3,21 @@ Create LeaveManagement Project
 	w.r.t. following things
 
 1) ShowEmployees
-2) Search By Employee
+2) Search By Employee (Empid)
 3) ApplyLeave
 
 	validations :
 	   LeaveStartDate cannot be greater than LeaveEndDate
+	   Check for LeaveBalance is Ok or not, if no balance you cannot 
+	   apply Leave
 	   Once leave applied you need to deduct balance from Employ table 
-	   LeaveStatus by default Pending.
+	   LeaveStatus by default PENDING.
 
-4) SearchByLeaveId
+4) SearchByLeaveId 
 
-Finish the above modules by 11 AM as ApproveDeny i will explain
+Finish the above modules by 11 AM as ApproveDeny i will explain,
+
+
 
 
 
