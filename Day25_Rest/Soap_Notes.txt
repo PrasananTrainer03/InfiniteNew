@@ -1,0 +1,32 @@
+Webservies : 
+
+Webservices exposes no.of methods, that can be called across various programming
+languages. 
+
+If you want to make any method as write once and call from many programming languages,
+then we need the help of webservices. 
+
+There are 2 types of webservices known as
+
+	(i) SOAP based
+
+	(ii) REST based
+
+SOAP (Simple Object Access Protocol) 
+
+	It is a protocol that which enables the communication w.r.t. webservice
+and client. 
+
+It has various standards as
+
+WSDL (Webservices Description Language) 
+
+	Allows you to convert programming code into xml format. Generates
+xml vocoblury for web methods which are there in service. 
+
+UDDI (Universal Description, Discovery and Integration) 
+
+	It is a place where we can register and deploy the webservices. 
+
+XML : Generates xml vocoblury for webmethods as SOAP services purely transfers data w.r.t. XML format. 
+

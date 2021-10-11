@@ -1,0 +1,118 @@
+
+
+The major drawback with SOAP services is 
+
+it transforms data only in xml format, that is not correct practice, because
+i need data transfer to be happen as Plain_Text, HTML, XML, JSON etc...
+
+then the best solution for this is we need the help of REST Services. 
+
+REST (Representational State Transfer) 
+
+allows you to transfer data w.r.t. various formats as XML, PLAIN_TEXT, HTML_TEXT, JSON etc...
+
+Rest purely works in Annotation basis, so it works very faster. 
+
+REST Services have 4 http verbs as 
+
+GET
+
+@GET -> Used when you need to retreive any resources from server. 
+
+POST  -> Used for INSERT operation
+
+@POST
+
+PUT -> Used for input/update operation.
+
+@PUT
+
+DELETE -> Used for Delete Operation
+
+@DELETE 
+
+@Path annotation gives alias name to method and as well as for class. 
+
+@Produces
+The
+@Produces annotation is used to specify the MIME media types of
+representations a resource can produce and send back to the client: for
+example,example,"text/ (Multi-purpose internet mail Extension) 
+
+
+@Path("/helloservice")
+public class HelloService
+{
+      @GET
+      @Path("/hello")
+      @Produces(MediaType.TEXT_PLAIN)
+      public String sayHello() {
+         return "Welcome to Rest Services...";
+      }
+}
+
+
+@
+PathParam The
+PathParam annotation is a type of parameter that can be
+extracted for use in the resource class. URI path parameters are
+extracted from the request URI, and the parameter names correspond
+to the URI path template variable names specified in
+the @Path class level annotation.
+
+how to call the service 
+
+Assume your application name is RestDemo, then 
+
+http://localhost:8080/RestService/webapi/helloservice/trainer
+
+http://localhost:8080/RestService/webapi/helloservice/company
+
+http://localhost:8080/RestService/webapi/helloservice/hello
+
+http://localhost:8080/RestService/webapi/greeting/info/Tanveer
+
+http://localhost:8080/RestService/webapi/calc/sum/12/5
+
+http://localhost:8080/RestService/webapi/calc/sub/12/5
+
+http://localhost:8080/RestService/webapi/calc/mult/12/5
+
+The above code, needs to convert as Service. 
+
+
+
++___________________________________________________________________________________
+
+    <dependencies>
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet-core</artifactId>
+            <!-- use the following artifactId if you don't need servlet 2.x compatibility -->
+            <!-- artifactId>jersey-container-servlet</artifactId -->
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-moxy</artifactId>
+        </dependency>
+        <dependency>
+    <groupId>jakarta.xml.bind</groupId>
+    <artifactId>jakarta.xml.bind-api</artifactId>
+    <version>2.3.2</version>
+</dependency>
+
+<!-- Runtime, com.sun.xml.bind module -->
+<dependency>
+    <groupId>org.glassfish.jaxb</groupId>
+    <artifactId>jaxb-runtime</artifactId>
+    <version>2.3.2</version>
+</dependency>
+        
+    </dependencies>
+    <properties>
+        <jersey.version>2.25.1</jersey.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+__________________________________________________________________
+
