@@ -1,0 +1,11 @@
+@Consumes
+The @Consumes annotation is used to specify the MIME media types of
+representations a resource can consume that were sent by the client.
+
+@Produces
+The @Produces annotation is used to specify the MIME media types of
+representations a resource can produce and send back to the client: for
+example,example,"text/
+
+
+curl -vvv -H "Accept:application/json" -X POST -H "Content-Type:application/json" -d '{"empno":"18","name":"JOEL Varghese","gender":"MALE","dept":"Java","desig":"Programmer","basic":"48234"}' "http://localhost:8080/RestEmployDemo/webapi/employ/addEmploy"
