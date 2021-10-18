@@ -1,0 +1,24 @@
+create database cr;
+use cr;
+
+Create Table Complaint
+(
+   ComplaintID varchar(30) primary key,
+   ComplaintType varchar(30),
+   CDescription varchar(100),
+   ComplaintDate date,
+   Severity varchar(20),
+   Status varchar(30) default 'Pending'
+);
+
+
+AddComplaint, SearchComplaint, ShowAllComplaint
+
+Create Table Resolve
+(
+   ComplaintID varchar(30),
+   ComplaintDate date,
+   ResolveDate date,
+   ResolvedBy varchar(30),
+   Comments varchar(100)
+);
