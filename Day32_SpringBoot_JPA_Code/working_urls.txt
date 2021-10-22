@@ -4,3 +4,25 @@ http://localhost:9922/employ/1
 
 http://localhost:9922/addEmploy
 
+
+Above urls of SpringBoot JPA please create and call the client and show
+demo by 10.30 
+
+and try for Agent Table also for SpringBoot JPA CrudRepository. 
+
+Then we do for Hibernate and JPA custom methods CRUD Repository 
+
+JPA methods we call in Hibernate by evening. 
+
+
+
+Santosh Kumar M S
+
+Akash
+
+Tanveer
+
+Ibrahim
+
+
+
