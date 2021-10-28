@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+	<h:head>
+        <title>Employ Details</title>
+          <style type="text/css">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            th, td {
+                text-align: left;
+                padding: 8px;
+            }
+
+            tr:nth-child(even){background-color: #f2f2f2}
+            th {
+                background-color: #4CAF50;
+                color: white;
+            }
+        </style>
+    </h:head>
+	    <h:body>
+        <h:form>
+            <center>
+                <h2><h:outputText value="Employ Records"/></h2>
+            </center>
+            <h:dataTable value="#{employDao.showEmploy()}" var="e">
+                <h:column>
+                    <f:facet name="header">Employ Id</f:facet>
+                    <h:outputText value="#{e.empno}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Employ Name</f:facet>
+                    <h:outputText value="#{e.name}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Gender</f:facet>
+                    <h:outputText value="#{e.gender}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Department</f:facet>
+                    <h:outputText value="#{e.dept}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Designation</f:facet>
+                    <h:outputText value="#{e.desig}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Basic</f:facet>
+                    <h:outputText value="#{e.basic}"/>
+                </h:column>
+            </h:dataTable>
+        </h:form>
+    </h:body>
+</html>
