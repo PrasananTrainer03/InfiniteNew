@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC 
+"-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="beanAishwarya" class="com.java.spr.Person">
+		<property name="id" value="1"/>
+		<property name="name" value="Aishwarya"/>
+		<property name="jobDetails" ref="beanJobDetails"/>
+		<property name="familyDetails">
+			<bean class="com.java.spr.Family">
+				<property name="city" value="Rourkela"/>
+				<property name="state" value="Orissa"/>
+			</bean>
+		</property>
+	</bean>
+	<bean id="beanRaghuvir" class="com.java.spr.Person">
+		<property name="id" value="2"/>
+		<property name="name" value="Raghuvir"/>
+		<property name="jobDetails" ref="beanJobDetails"/>
+		<property name="familyDetails">
+			<bean class="com.java.spr.Family">
+				<property name="city" value="Jameshedpur"/>
+				<property name="state" value="Jarkhand"/>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="beanTejaswini" class="com.java.spr.Person">
+		<property name="id" value="3"/>
+		<property name="name" value="Tejaswini"/>
+		<property name="jobDetails" ref="beanJobDetails"/>
+			
+		<property name="familyDetails">
+			<bean class="com.java.spr.Family">
+				<property name="city" value="Bangalore"/>
+				<property name="state" value="Karnataka"/>
+			</bean>
+		</property>
+	</bean>
+	<bean id="beanJobDetails" class="com.java.spr.JobDetails">
+		<property name="job" value="Software Engineer"/>
+		<property name="company" value="Infinite"/>
+		<property name="location" value="Bangalore"/>
+	</bean>
+</beans>

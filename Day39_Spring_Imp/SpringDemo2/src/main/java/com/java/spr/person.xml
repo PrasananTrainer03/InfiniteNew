@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd">
+   
+<context:annotation-config/>
+	<bean id="beanAishwarya" class="com.java.spr.Person">
+		<property name="id" value="1"/>
+		<property name="name" value="Aishwarya"/>
+		<property name="familyDetails">
+			<bean class="com.java.spr.Family">
+				<property name="city" value="Rourkela"/>
+				<property name="state" value="Orissa"/>
+			</bean>
+		</property>
+	</bean>
+	<bean id="beanRaghuvir" class="com.java.spr.Person">
+		<property name="id" value="2"/>
+		<property name="name" value="Raghuvir"/>
+		<property name="familyDetails">
+			<bean class="com.java.spr.Family">
+				<property name="city" value="Jameshedpur"/>
+				<property name="state" value="Jarkhand"/>
+			</bean>
+		</property>
+	</bean>
+		<bean id="beanShashank" class="com.java.spr.Person">
+		<property name="id" value="4"/>
+		<property name="name" value="Shashank"/>
+		<property name="jobDetails" ref="jobNewDetails" />
+		<property name="familyDetails">
+			<bean class="com.java.spr.Family">
+				<property name="city" value="Bangalore"/>
+				<property name="state" value="Karnataka"/>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="beanTejaswini" class="com.java.spr.Person">
+		<property name="id" value="3"/>
+		<property name="name" value="Tejaswini"/>
+		<property name="familyDetails">
+			<bean class="com.java.spr.Family">
+				<property name="city" value="Bangalore"/>
+				<property name="state" value="Karnataka"/>
+			</bean>
+		</property>
+	</bean>
+	<bean id="jobDetails" class="com.java.spr.JobDetails">
+		<property name="job" value="Software Engineer"/>
+		<property name="company" value="Infinite"/>
+		<property name="location" value="Bangalore"/>
+	</bean>
+	
+	<bean id="jobNewDetails" class="com.java.spr.JobDetails">
+		<property name="job" value="Senior Software Engineer"/>
+		<property name="company" value="Infinite"/>
+		<property name="location" value="Pune"/>
+	</bean>
+</beans>
