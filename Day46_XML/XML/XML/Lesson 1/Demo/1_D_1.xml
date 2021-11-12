@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--PRODUCTDATA is the root element-->
+<PRODUCTDATA>
+<PRODUCT PRODID="P001">
+<PRODUCTNAME>Barbie Doll</PRODUCTNAME>
+<DESCRIPTION>This is a toy for children in the age group of 5-10 years </DESCRIPTION>
+<PRICE>$20.00</PRICE>
+<QUANTITY>12</QUANTITY>
+</PRODUCT>
+</PRODUCTDATA>

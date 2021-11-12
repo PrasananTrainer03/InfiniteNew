@@ -1,0 +1,22 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element   name="RESERVATION"    type="res"/>
+<xsd:complexType name="res">
+  <xsd:sequence>
+  <xsd:element   name="FROM"    type="fromdef"/>
+  <xsd:element   name="TO"    type="fromdef"/>
+  <xsd:element   name="FARE"    type="xsd:positiveInteger"/>
+  <xsd:element   name="DATE"    type="xsd:date"/>
+  <xsd:element   name="CLASS"   type="classdef"/>
+  </xsd:sequence>
+</xsd:complexType>
+<xsd:simpleType name="fromdef">
+  <xsd:restriction base="xsd:string">
+  <xsd:pattern value="(NY{1}|Chicago{1}|Miami{1}|Pittsburgh)"/>
+  </xsd:restriction>
+  </xsd:simpleType>
+<xsd:simpleType name="classdef">
+  <xsd:restriction base="xsd:string">
+  <xsd:pattern value="(First{1}|Executive{1}|Economy{1})"/>
+  </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

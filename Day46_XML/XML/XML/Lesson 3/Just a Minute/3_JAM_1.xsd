@@ -1,0 +1,24 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:attribute name="BOOKID" type="xsd:string"/>
+<xsd:element   name="BOOKDATA" type="bodata"/>
+<xsd:complexType name="bodata">
+<xsd:sequence>
+<xsd:element  name="BOOK"  type="bk"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="bk">
+ <xsd:sequence>
+ <xsd:element  name="BOOKNAME" type="xsd:string"/>
+ <xsd:element  name="AFNAME" type="xsd:string"/>
+ <xsd:element  name="ALNAME" type="xsd:string"/>
+ <xsd:element  name="PRICE"  type="xsd:positiveInteger"/>
+ </xsd:sequence>
+ <xsd:attribute ref="BOOKID"/>
+ <xsd:attribute name="BOOKCOVER" type="bc" use="required"/>
+</xsd:complexType>
+<xsd:simpleType name="bc">
+<xsd:restriction base="xsd:string">
+<xsd:pattern value="Hard|Soft"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,39 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.ecomatcybershoppe.com/supplier" 
+	xmlns:supp="http://www.ecomatcybershoppe.com/supplier">
+	<include schemaLocation="4_P_1_a.xsd"/>
+	<element name="SUPPLIERDETAILS">
+		<complexType>
+			<sequence>
+				<element  name="SUPPLIER"  type="supp:suppdata" maxOccurs="unbounded"/>
+			</sequence>	
+		</complexType>
+	</element>	
+
+	<complexType name="suppdata">
+		<sequence>	
+			<group ref="supp:suppgrp"/>
+			<element  name="ADDRESS" type="supp:address"/>
+			<element  name="PHONE" type="string"/>
+			<element  name="TYPE"  type="supp:suppliertype"/>
+		</sequence>
+		<attribute name="SUPPLIERID" type="supp:suppstring"/>
+	</complexType>
+	
+	<group name="suppgrp">
+		<choice>
+		 <sequence>
+			<element  name="FIRSTNAME" type="string"/>
+			<element  name="LASTNAME" type="string"/>
+         </sequence>
+		<element name="NAME" type="string" />
+		</choice>
+	</group>
+
+	<simpleType name="suppliertype">
+		<restriction base="string">
+			<pattern value="(Individual|Company)"/>
+		</restriction>
+	</simpleType>
+
+</schema>

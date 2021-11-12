@@ -1,0 +1,36 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="CUSTOMERDATA" type="cdata"/>
+<!-- Declaration for the "cdata" complex type -->
+<xsd:complexType name="cdata">
+<xsd:sequence>
+<xsd:element name="CUSTOMER" type="custtype"/>
+</xsd:sequence>
+</xsd:complexType>
+<!-- Declaration for the "custtype" complex type -->
+<xsd:complexType name="custtype">
+<xsd:sequence>
+<xsd:element name="FIRSTNAME" type="xsd:string"/>
+<xsd:element name="LASTNAME" type="xsd:string"/>
+<xsd:element name="CONTACTINFO" type="contacttype" />
+</xsd:sequence>
+<xsd:attribute name="CUSTOMERID" type="xsd:string" use="required"/>
+</xsd:complexType>
+<!-- Declaration for the "contacttype" complex type -->
+<xsd:complexType name="contacttype">
+<xsd:choice>
+<xsd:element name="RESIDENCE" type="addtype" />
+<xsd:element name="OFFICE" type="addtype" />
+</xsd:choice>
+</xsd:complexType>
+<!-- Declaration for the "addtype" complex type -->
+<xsd:complexType name="addtype">
+<xsd:group ref="ADDPHONE" />
+</xsd:complexType>
+<!-- Declaration for the "ADDPHONE" element group  -->
+<xsd:group name="ADDPHONE">
+<xsd:sequence>
+<xsd:element name="ADDRESS" type="xsd:string"/>
+<xsd:element name="PHONE" type="xsd:string"/>
+</xsd:sequence>
+</xsd:group>
+</xsd:schema>

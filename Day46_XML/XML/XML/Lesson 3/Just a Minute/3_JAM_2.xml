@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<prod:SALES xmlns:prod="www.ecomatcybershop.com/sale" >
+<TRAN  PRODID="P001" TRANID="O001" CUSTID="C001">
+<DATE>2000-02-13</DATE>
+<QUANTITY>3</QUANTITY>
+<PRICEPERUNIT>20</PRICEPERUNIT>
+</TRAN>
+</prod:SALES>

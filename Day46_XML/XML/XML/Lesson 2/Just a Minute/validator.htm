@@ -1,0 +1,83 @@
+<html>
+<head> <title>Untitled Document</title> 
+<script Language="javascript">
+var transformedwindow;
+function doValidate()
+{
+if ((document.frmTransform.TxtXMLFileName.value).length == 0) 
+{
+alert("Invalid XML FileName");
+return;
+}
+var xmldoc= new ActiveXObject("Msxml2.DOMDocument.4.0");
+xmldoc.validateOnParse = true;
+xmldoc.load(document.frmTransform.TxtXMLFileName.value);
+var error=xmldoc.parseError;
+transformedwindow=window.open('Transformed.htm','_new','location=0,status=1,toolbar=0,menuBar=0,scrollBars=0,directories=0,resizable=0,width=600,height=600');
+if(error!="")
+{
+transformedwindow.document.write('<HTML><TITLE>DTD Validator</Title><BODY><P><b>Error Validating the document</b></p><br>');
+transformedwindow.document.write('<b>Error URL: </b><br>' + error.url + '<br>');
+transformedwindow.document.write('<b>Error Line: </b><br>' + error.line + '<br>');
+transformedwindow.document.write('<b>Error Position: </b><br>' + error.linepos + '<br>');
+transformedwindow.document.write('<b>Error Reason: </b><br>' + error.reason + '<br>');  
+transformedwindow.document.write('</BODY></HTML>');
+}
+else
+{
+	transformedwindow.document.write('<HTML><TITLE>DTD Validator</Title><BODY><b>No Error </b><br>');
+transformedwindow.document.write('</BODY></HTML>');
+}
+}
+function doReset()
+{
+document.frmTransform.TxtXMLFileName.value="";
+if (!(typeof transformedwindow == "undefined"))
+transformedwindow.close();
+}
+</script>
+</head>
+<body bgcolor="#6699CC" text="#FFFFFF">
+<p>&nbsp;</p>
+<p align="center"><font face="Verdana, Arial, Helvetica, sans-serif"><b><u>XML - DTD Validator Module 
+</u></b></font></p>
+<p>&nbsp;</p>
+<form name="frmTransform" method="post" action="">
+<table width="75%" border="0" align="center">
+<tr> 
+<td width="31%">
+<div align="center"><b>Enter the XML File Name:</b></div>
+</td>
+<td width="18%"> 
+<input type="text" name="TxtXMLFileName">
+<font face="Verdana, Arial, Helvetica, sans-serif" size="2"></font> 
+</td>
+<td width="10%">
+<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+<a href="#" onClick="javascript:doValidate()">Validate</a>
+</font>
+</td>
+<td width="41%">
+<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+<a href="#" onClick="javascript:doReset()">Reset</a>
+</font>
+</td>
+</tr>
+<tr> 
+     <td width="31%"> </td>
+     <td colspan="3"> </td>
+</tr>
+<tr> 
+     <td colspan="4"> 
+         <div align="left"></div>
+         <div align="left"></div>
+     </td>
+</tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+<p>&nbsp; </p>
+<p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"> </font></p>
+</form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<supp1:SUPPLIERDETAILS xmlns:supp1="http://www.ecomatcybershoppe.com/supplier">
+	<SUPPLIER SUPPLIERID="S001">
+		<FIRSTNAME> Keith </FIRSTNAME>
+		<LASTNAME> Williams </LASTNAME>
+		<ADDRESS>
+			<STREET> LIONS STREET </STREET>
+			<CITY> DAVENPORT</CITY>
+			<STATE> IOWA </STATE>
+			<ZIP> 234-1223 </ZIP>
+		</ADDRESS>
+		<PHONE> 294-234-1223 </PHONE>
+		<TYPE>Company</TYPE>
+	</SUPPLIER>
+</supp1:SUPPLIERDETAILS>

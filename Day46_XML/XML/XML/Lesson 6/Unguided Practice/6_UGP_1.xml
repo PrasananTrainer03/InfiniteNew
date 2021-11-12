@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?xml:stylesheet type="text/css" href="6_UGP_1.css"?>
+<EMPDETAILS>
+  <EMP EMPID="E001">
+   <ENAME>Karen</ENAME>
+   <DESG>MANAGER</DESG>
+   <DEPT>SALES</DEPT>
+   <SALARY>250</SALARY>
+  </EMP>
+  <EMP EMPID="E002">
+   <ENAME>George</ENAME>
+   <DESG>Executive</DESG>
+   <DEPT>ACCOUNTS</DEPT>
+   <SALARY>300</SALARY>
+  </EMP>
+  <EMP EMPID="E003">
+   <ENAME>Steve</ENAME>
+   <DESG>Manager</DESG>
+   <DEPT>FINANCE</DEPT>
+   <SALARY>320</SALARY>
+  </EMP>
+  <EMP EMPID="E004">
+   <ENAME>Ricky</ENAME>
+   <DESG>Clerk</DESG>
+   <DEPT>SALES</DEPT>
+   <SALARY>150</SALARY>
+  </EMP>
+  <EMP EMPID="E005">
+   <ENAME>Richard</ENAME>
+   <DESG>Divisional Manager</DESG>
+   <DEPT>MARKETING</DEPT>
+   <SALARY>375</SALARY>
+  </EMP>
+</EMPDETAILS>

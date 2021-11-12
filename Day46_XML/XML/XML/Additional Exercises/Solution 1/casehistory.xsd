@@ -1,0 +1,37 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.Getwellsoon.com/patient"   xmlns:pat="http://www.Getwellsoon.com/patient">
+	<include schemaLocation="commoninfo.xsd"/>
+	<element  name="CASEHISTORY">
+		<complexType>
+		<sequence>
+		<element   name="PERSONALINFORMATION"    type="pat:dtpersonaldata"/>
+			<element   name="CASEINFORMATION"    type="pat:dtcasedata"/>
+			</sequence>	
+		<attribute name="CASESHEETID" type="pat:dtcasesheetid"/>
+		</complexType>
+	</element>	
+	<complexType name="dtpersonaldata">
+		<sequence>	
+			<element   name="NAME" type="string"/>
+			<element   name="ADDRESS" type="pat:dtaddress"/>
+			<element   name="GENDER" type="pat:dtgender"/>
+			<element   name="AGE"   type="positiveInteger"/>
+			<element   name="EXISTINGDISEASES"   type="string"/>
+		</sequence>
+	</complexType>
+	<complexType name="dtcasedata">
+		<sequence>	
+		<element   name="VISITINFORMATION" type="pat:dtdateofvisit" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+	<complexType name="dtdateofvisit">
+		<sequence>	
+			<element   name="DATE" type="date"/>
+			<element   name="DOCTOR" type="string"/>
+			<element   name="COMPLAIN" type="string"/>
+			<element   name="DIAGNOSIS" type="string"/>
+			<element   name="PRESCRIPTION" type="string"/>
+			<element   name="NEXTDATEOFVISIT" type="date"/>
+		</sequence>
+	</complexType>
+</schema>
+

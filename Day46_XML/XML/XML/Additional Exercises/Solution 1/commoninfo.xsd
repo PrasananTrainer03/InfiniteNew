@@ -1,0 +1,22 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.Getwellsoon.com/patient"   xmlns:pat="http://www.Getwellsoon.com/patient">
+	<simpleType name="dtcasesheetid">
+		<restriction base="string">
+			<pattern value="[C]\d{3}"/>
+		</restriction>
+	</simpleType>
+	<complexType name="dtaddress">
+		<sequence>
+			<element name="HOUSENUMBER"   type="string"/>
+			<element name="STREET" type="string"/>
+			<element name="CITY"   type="string"/>
+			<element name="STATE"  type="string"/>
+			<element name="ZIP"    type="decimal"/>
+		</sequence>
+	</complexType>
+	<simpleType name="dtgender">
+		<restriction base="string">
+			<pattern value="(MALE|FEMALE)"/>
+		</restriction>
+	</simpleType>
+</schema>
+

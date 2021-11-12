@@ -1,0 +1,21 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="MOVIEDETAILS" type="mdet"/>
+<xsd:complexType name="mdet">
+<xsd:sequence>
+<xsd:element  name="MOVIE"  type="mve"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="mve">
+ <xsd:sequence>
+ <xsd:element  name="TITLE" type="xsd:string"/>
+ <xsd:element  name="MOVIEID" type="mid"/>
+ <xsd:element  name="DIRNAME" type="xsd:string"/>
+ <xsd:element  name="CAST"  type="xsd:string"/>
+ <xsd:element  name="YEAROFRELEASE"  type="xsd:string"/>  </xsd:sequence>
+</xsd:complexType>
+<xsd:simpleType name="mid">
+<xsd:restriction base="xsd:string">
+<xsd:pattern value="[M]{1}\d{1}\d{1}\d{1}"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,20 @@
+<html>
+<head>
+<script language="JavaScript">
+
+function loadXML()
+{
+var myxmlDoc = new ActiveXObject("Msxml2.DOMDocument.4.0")
+myxmlDoc.async=false
+myxmlDoc.load("products.xml")
+var myelement = myxmlDoc.getElementsByTagName("PRICE");
+for (i=0; i<= myelement.length -1; ++i)
+{
+	alert(myelement.item(i).text)
+}
+}
+</script>
+</head>
+<body onLoad="loadXML()">
+</body>	
+	

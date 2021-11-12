@@ -1,0 +1,21 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="www.ecomatcybershop.com/sale"
+xmlns:prd="www.ecomatcybershop.com/sale">
+<include schemaLocation="3_JAM_2_a.xsd"/>
+<element name="SALES" type="prd:saletran"/>
+<complexType name="saletran">
+<sequence>
+<element name="TRAN" type="prd:tran"/>
+</sequence>
+</complexType>
+<complexType name="tran">
+<sequence>
+<element name="DATE" type="date"/>
+<element   name="QUANTITY" type="positiveInteger"/>
+<element   name="PRICEPERUNIT"   type="positiveInteger"/>
+</sequence>
+<attribute name="PRODID" type="prd:prstring"/>
+<attribute name="TRANID" type="prd:orstring" use="required"/>
+<attribute name="CUSTID" type="prd:custstring" use="required"/>
+</complexType>
+</schema>

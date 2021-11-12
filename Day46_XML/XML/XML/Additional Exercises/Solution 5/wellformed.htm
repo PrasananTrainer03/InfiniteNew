@@ -1,0 +1,54 @@
+<! --- XMLDisplayStringNewNode.htm -- >
+<html>
+<head>
+<title>XML</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="#FFFFFF">
+  <form name="frmPatient" method="post" action="">
+    <table width="60%" border="0">
+      <tr>
+        <td width="60%"><font face="Arial, Helvetica, sans-serif" size="2">Enter the XML String Here 
+         </font></td>
+	</tr>
+	<tr>
+        <td width="24%"> 
+	<TEXTAREA cols=70 name=TxtName rows=20></TEXTAREA>
+        </td>
+	</tr>
+	<tr>
+        <td width="41%"><font size="2" face="Arial, Helvetica, sans-serif"><a href="#" onclick="javascript:cmdSubmit_click()">Submit</a></font></td>
+      </tr>
+    </table>
+  </form>
+  <p align="left">&nbsp;</p>
+<script Language="javascript">
+function cmdSubmit_click()
+{
+	var newelement;
+	var rootnode;
+	if (frmPatient.TxtName.value.length==0)
+	{
+		alert ("Invalid XML String");
+	}
+	else
+	{
+		var xmldoc= new ActiveXObject("Msxml2.DOMDocument.4.0");    																												xmldoc.loadXML(frmPatient.TxtName.value);
+		var error=xmldoc.parseError;		
+		if(error!="")
+		{
+			alert("error");
+		}
+		else
+		{
+			rootnode=xmldoc.documentElement;
+			newelement=xmldoc.createElement("WELLFORMED");																								rootnode.appendChild(newelement);
+			rootnode.lastChild.text = "good";	
+			frmPatient.TxtName.value=xmldoc.xml
+		}
+	}
+	}
+</script>
+</body>
+</html>
+

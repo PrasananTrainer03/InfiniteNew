@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<PRODUCTDATA>
+ <PRODUCT>
+  <PRODUCTNAME>Barbie Doll</PRODUCTNAME>
+  <DESCRIPTION>This is a doll for children aged 11 and above</DESCRIPTION>
+  <PRICE>10</PRICE>
+  <QUANTITY>12</QUANTITY>
+ </PRODUCT>
+ <PRODUCT>
+  <PRODUCTNAME>Mini Bus</PRODUCTNAME>
+  <DESCRIPTION>This is a toy for children aged 11 and above</DESCRIPTION>
+  <PRICE>20</PRICE>
+  <QUANTITY>12</QUANTITY>
+ </PRODUCT>
+</PRODUCTDATA> 

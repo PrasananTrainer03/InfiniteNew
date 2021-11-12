@@ -1,0 +1,25 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element   name="MOVIEDETAILS" type="mdata"/>
+<xsd:complexType name="mdata">
+<xsd:sequence>
+<xsd:element  name="MOVIE"  type="mov"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="mov">
+ <xsd:sequence>
+ <xsd:element  name="DATEOFRELEASE" type="xsd:date"/>
+ <xsd:element  name="MOVIENAME" type="xsd:string"/>
+ <xsd:element  name="CAST"  type="xsd:string"/>
+ <xsd:element  name="DIRECTOR"  type="xsd:string"/>
+ <xsd:element  name="AWARDS" type="xsd:string"/>
+ </xsd:sequence>
+ <xsd:attribute name="MOVIEID" type="xsd:string" use="required"/>
+ <xsd:attribute name="CATEGORY" type="cat" use="required"/>
+ <xsd:attribute name="LENGTH" type="xsd:positiveInteger" use="required"/>
+</xsd:complexType>
+<xsd:simpleType name="cat">
+<xsd:restriction base="xsd:string">
+<xsd:pattern value="Horror|Comedy|Romance|Drama|Action"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:schema>

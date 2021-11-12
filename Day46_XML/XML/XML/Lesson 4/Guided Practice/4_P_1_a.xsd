@@ -1,0 +1,17 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.ecomatcybershoppe.com/supplier" 
+	xmlns:supp="http://www.ecomatcybershoppe.com/supplier">
+<simpleType name="suppstring">
+<restriction base="string">
+<pattern value="[S]{1}\d{3}"/>
+</restriction>
+</simpleType>
+<complexType name="address">
+ <sequence>
+  <element name="STREET" type="string"/>
+  <element name="CITY"  type="string"/>
+  <element name="STATE" type="string"/>
+  <element name="ZIP"  type="string"/>
+ </sequence>
+</complexType>
+</schema>

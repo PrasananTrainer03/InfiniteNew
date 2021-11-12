@@ -1,0 +1,13 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="www.ecomatcybershop.com/purchase">
+<simpleType name="prstring">
+<restriction base="string">
+<pattern value="[P]{1}\d{3}"/>
+</restriction>
+</simpleType>
+<simpleType name="orstring">
+<restriction base="string">
+<pattern value="[O]{1}\d{3}"/>
+</restriction>
+</simpleType>
+</schema>

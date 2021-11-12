@@ -1,0 +1,26 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.ecomatcybershoppe.com/employee" 
+	xmlns:emp="http://www.ecomatcybershoppe.com/employee">
+
+	<include schemaLocation="4_UGP_2_a.xsd"/>
+
+
+	<element  name="EMPLOYEEDETAILS">
+		<complexType>
+			<sequence>
+				<element   name="EMPLOYEE"    type="emp:empdata" maxOccurs="unbounded"/>
+			</sequence>	
+		</complexType>
+	</element>	
+
+	<complexType name="empdata">
+		<sequence>	
+			<element   name="NAME" type="string"/>
+			<element   name="ADDRESS" type="string"/>
+			<element   name="DESIGNATION" type="string"/>
+			<element   name="DEPARTMENT"   type="string"/>
+			<element   name="DATEOFJOINING"   type="date"/>
+		</sequence>
+		<attribute name="EMPID" type="emp:empstring"/>
+	</complexType>
+</schema>

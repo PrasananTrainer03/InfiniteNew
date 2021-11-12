@@ -1,0 +1,22 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element   name="BOOKDETAILS" type="bdata"/>
+<xsd:complexType name="bdata">
+<xsd:sequence>
+<xsd:element  name="BOOK"  type="bk"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="bk">
+ <xsd:sequence>
+ <xsd:element  name="TITLE"  type="xsd:string"/>
+ <xsd:element  name="ISBN"  type="isbnum"/>
+ <xsd:element  name="FIRSTNAME"  type="xsd:string"/>
+ <xsd:element  name="LASTNAME"  type="xsd:string"/>
+ <xsd:element  name="PRICE"  type="xsd:positiveInteger"/>
+ </xsd:sequence>
+</xsd:complexType>
+<xsd:simpleType name="isbnum">
+ <xsd:restriction base="xsd:string">
+  <xsd:pattern value="[I]{1}\d{1}\d{1}\d{1}"/>
+ </xsd:restriction>
+ </xsd:simpleType>
+</xsd:schema>

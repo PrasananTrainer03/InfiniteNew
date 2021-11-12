@@ -1,0 +1,22 @@
+<script language="vbscript">
+sub openfile
+On Error Resume Next
+Dim CDObj
+Set CDObj =  CreateObject("MSComDlg.CommonDialog")
+If Err Then
+   MsgBox "Can't create Dialog Object!?"
+End If
+CDObj.MaxFileSize = 260 ' Init buffer (NECESSARY!)
+CDObj.Flags = &H1004    ' File Must Exist + no ReadOnly checkbox
+CDObj.ShowOpen
+Dim fname
+fname = CDObj.filename
+' Cancel or no file name?
+If fname <> vbNullString Then
+	document.frmTransform.txtXMLFileName=fname
+End if
+document.frmTransform.txtXMLFileName.value=fname
+msgbox fname
+Set CDObj = Nothing
+end sub
+</script>

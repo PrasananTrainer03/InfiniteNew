@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<PRODUCTDATA>
+   <PRODUCT PRODID="P001" CATEGORY="Toy">
+      <PRODUCTNAME>Mini Bus</PRODUCTNAME>
+      <DESCRIPTION>This is a toy for children aged 4 and above</DESCRIPTION>
+      <PRICE>75</PRICE>
+      <QUANTITY>54</QUANTITY>
+   </PRODUCT>
+</PRODUCTDATA>

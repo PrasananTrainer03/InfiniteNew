@@ -1,0 +1,37 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="JOBDETAILS" type="complexTypeJobDetails"/>
+<xsd:complexType name="complexTypeJobDetails">
+	<xsd:sequence>
+		<xsd:element name="JOB" type="complexTypeJob" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="complexTypeJob">
+	<xsd:sequence>
+		<xsd:element name="COMPANYNAME" type="xsd:string"/>
+		<xsd:element name="JOBDESCRIPTION" type="xsd:string"/>
+		<xsd:element name="EXPERIENCE" type="xsd:string"/>
+		<xsd:element name="QUALIFICATION" type="qualificationtype"/>
+	</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="qualificationtype">
+   <xsd:choice>
+			<xsd:element name="STRICTQUALIFICATION" type="strictqual" />
+			<xsd:element name="RELAXEDQUALIFICATION" type="relaxedqual" />
+	</xsd:choice>
+</xsd:complexType>
+<xsd:group name="strictqualref">
+		<xsd:sequence>
+			<xsd:element name="GRADUATE" type="xsd:string"/>
+			<xsd:element name="POSTGRADUATE" type="xsd:string"/>
+		</xsd:sequence>
+</xsd:group>
+<xsd:complexType name="strictqual">
+		<xsd:group ref="strictqualref" />
+</xsd:complexType>
+<xsd:complexType name="relaxedqual">
+		<xsd:choice>
+			<xsd:element name="GRADUATE" type="xsd:string"/>
+			<xsd:element name="POSTGRADUATE" type="xsd:string"/>
+		</xsd:choice>
+	</xsd:complexType>
+</xsd:schema>

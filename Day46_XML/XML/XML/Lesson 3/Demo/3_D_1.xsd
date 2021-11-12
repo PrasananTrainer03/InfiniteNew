@@ -1,0 +1,23 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="PRODUCTDATA" type="prdata"/>
+<xsd:complexType name="prdata">
+<xsd:sequence>
+   <xsd:element name="PRODUCT" type="prdt"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="prdt">
+<xsd:sequence>
+   <xsd:element name="PRODUCTNAME" type="xsd:string"/>
+   <xsd:element name="DESCRIPTION" type="xsd:string"/>
+   <xsd:element name="PRICE" type="xsd:positiveInteger"/>
+   <xsd:element name="QUANTITY" type="xsd:integer"/>
+</xsd:sequence>
+<xsd:attribute name="PRODID" type="xsd:string" use="required"/>
+<xsd:attribute name="CATEGORY" type="cat" use="required"/>
+</xsd:complexType>
+<xsd:simpleType name="cat">
+<xsd:restriction base="xsd:string">
+   <xsd:pattern value="Toy|Book"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:schema>

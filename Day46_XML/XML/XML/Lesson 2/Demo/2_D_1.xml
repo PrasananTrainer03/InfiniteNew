@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE PRODUCTDATA SYSTEM "2_D_1.dtd">
+<PRODUCTDATA>
+     <PRODUCT PRODUCTID="P001" CATEGORY="BOOKS">
+          <PRODUCTNAME>Gone With the Wind</PRODUCTNAME>
+          <DESCRIPTION> The backdrop of this book is the American Civil War</DESCRIPTION>
+          <PRICE>25.00</PRICE>
+          <QUANTITY>35</QUANTITY>
+     </PRODUCT>
+</PRODUCTDATA>

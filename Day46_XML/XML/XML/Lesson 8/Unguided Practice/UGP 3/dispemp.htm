@@ -1,0 +1,17 @@
+<html>
+<script language="javascript">
+var empt = new ActiveXObject("Msxml2.XSLTemplate.4.0");
+var emptdoc = new ActiveXObject("Msxml2.FreeThreadedDOMDocument.4.0");
+var empproc;
+emptdoc.async = false;
+emptdoc.load("empss.xsl");
+empt.stylesheet = emptdoc;
+var empxml = new ActiveXObject("Msxml2.DOMDocument.4.0");
+empxml.async = false;
+empxml.load("emp.xml");
+empproc = empt.createProcessor();
+empproc.input = empxml;
+empproc.transform();
+alert(empproc.output);
+</script>
+</html>

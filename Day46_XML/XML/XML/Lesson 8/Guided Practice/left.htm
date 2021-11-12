@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript">
+var xmlDoc 
+function loadXML()
+{
+xmlDoc = new ActiveXObject("Msxml2.DOMDocument.4.0");
+xmlDoc.async = false;
+xmlDoc.load("8_P_1.xml");
+}
+
+function ApplyXSL()
+{
+var xslt = new ActiveXObject("Msxml2.XSLTemplate.4.0");
+var xslDoc = new ActiveXObject("Msxml2.FreeThreadedDOMDocument.4.0");
+var xslProc;
+xslDoc.async = false;
+alert (stylesheet.value);
+xslDoc.load(stylesheet.value);
+xslt.stylesheet = xslDoc;
+xslProc = xslt.createProcessor();
+xslProc.input = xmlDoc;
+xslProc.transform();
+parent.right.x.innerHTML=xslProc.output;
+}
+
+</script>
+
+</head>
+<body bgcolor="#FFFFFF" onLoad="loadXML()">
+<select name="stylesheet" onChange="ApplyXSL()">
+	<option value="8_P_1_a.xsl"> View Book Details in a Table </option>
+	<option value="8_P_1_b.xsl"> View Book Details in a List </option>
+</select>
+</body>
+</html>

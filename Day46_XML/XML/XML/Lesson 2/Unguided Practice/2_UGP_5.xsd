@@ -1,0 +1,37 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="ACCOUNTINFORMATION">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element   name="MAILINFORMATION"    type="mailinfo"/>
+			<xsd:element   name="ADDRESSBOOKINFORMATION"    type="addressbookinfo"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+<xsd:complexType name="mailinfo">
+	<xsd:sequence>
+		<xsd:element   name="MAILTYPE"    type="mailtype"/>
+		<xsd:element   name="FROM"    type="xsd:string"/>
+		<xsd:element   name="SUBJECT"    type="xsd:string"/>
+		<xsd:element   name="DATE"    type="xsd:date"/>
+		<xsd:element   name="SIZE"   type="xsd:positiveInteger"/>
+		<xsd:element   name="PRIORITY"   type="priority"/>
+	  </xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="addressbookinfo">
+	<xsd:sequence>
+		<xsd:element   name="QUICKNAME"    type="xsd:string"/>
+		<xsd:element   name="NAME"    type="xsd:string"/>
+		<xsd:element   name="EMAILID"    type="xsd:string"/>
+	  </xsd:sequence>
+</xsd:complexType>
+<xsd:simpleType name="mailtype">
+	<xsd:restriction base="xsd:string">
+		<xsd:pattern value="(MAIL|NEWS)"/>
+	</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="priority">
+	<xsd:restriction base="xsd:string">
+		<xsd:pattern value="(LOW|MEDIUM|HIGH)"/>
+	</xsd:restriction>
+</xsd:simpleType>
+</xsd:schema>

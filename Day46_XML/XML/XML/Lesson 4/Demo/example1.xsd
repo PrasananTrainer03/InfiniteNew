@@ -1,0 +1,11 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="PRODUCT" type="prdtype" />
+<xsd:complexType name="prdtype">
+<xsd:sequence>
+<xsd:element name="PRODNAME" type="xsd:string"/>
+<xsd:element name="DESCRIPTION" type="xsd:string"/>
+<xsd:element name="PRICE" type="xsd:float"/>
+<xsd:element name="QOH" type="xsd:positiveInteger"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>

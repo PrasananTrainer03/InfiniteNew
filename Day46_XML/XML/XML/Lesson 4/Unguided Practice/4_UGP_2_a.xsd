@@ -1,0 +1,9 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.ecomatcybershoppe.com/employee" 
+	xmlns:emp="http://www.ecomatcybershoppe.com/employee">
+	<simpleType name="empstring">
+		<restriction base="string">
+			<pattern value="[E]{1}\d{3}"/>
+		</restriction>
+	</simpleType>
+</schema>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="cust.xsl"?>
+<CUSTDETAILS>
+  <CUSTOMER CUSTID="C001">
+   <CUSTNAME>William Anderson</CUSTNAME>
+   <ADDRESS>13, Cross Street</ADDRESS>
+   <CITY>New York</CITY>
+   <STATE>New York</STATE>
+   <COUNTRY>USA</COUNTRY>
+   <PHONE>6785764</PHONE>
+  </CUSTOMER>
+  <CUSTOMER CUSTID="C002">
+   <CUSTNAME>Bill Sanders</CUSTNAME>
+   <ADDRESS>13, Crick Street</ADDRESS>
+   <CITY>Seattle</CITY>
+   <STATE>Washington</STATE>
+   <COUNTRY>USA</COUNTRY>
+   <PHONE>608475</PHONE>
+  </CUSTOMER>
+</CUSTDETAILS>

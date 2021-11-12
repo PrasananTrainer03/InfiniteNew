@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="emp.xsl"?>
+<EMPDETAILS>
+  <EMP>
+   <EMPNAME>William Hill</EMPNAME>
+   <DOB>1965/3/19</DOB>
+   <ADDRESS>13, Cross Street</ADDRESS>
+   <DESIG>Manager</DESIG>
+  </EMP>
+  <EMP>
+   <EMPNAME>Peter Hall</EMPNAME>
+   <DOB>1945/8/1</DOB>
+   <ADDRESS>24, Orange Street</ADDRESS>
+   <DESIG>Secretary</DESIG>
+  </EMP>
+  <EMP>
+   <EMPNAME>David Alexander</EMPNAME>
+   <DOB>1980/12/24</DOB>
+   <ADDRESS>10, Anchor Street</ADDRESS>
+   <DESIG>Manager</DESIG>
+  </EMP>
+</EMPDETAILS>

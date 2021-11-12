@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Untitled Document</title>
+</head>
+<body bgcolor="#FFFFFF">
+<form name="VIEW" method="post" action>
+  <p><input type="radio" name="optTable" value="radiobutton"
+  onClick="javascript:displayTable();"> View XML in tabular form <input type="radio"
+  name="optList" value="radiobutton" onClick="javascript:displayList();"> View XML in List <input
+  type="radio" name="optReset" value="radiobutton" onClick="javascript:displayReset();">
+  Reset</p>
+</form>
+</body>
+<script language="javascript">
+
+function displayTable()
+{
+document.VIEW.optList.checked=false;
+document.VIEW.optReset.checked=false;
+ var xslt = new ActiveXObject("Msxml2.XSLTemplate.4.0");
+var xslDoc = new ActiveXObject("Msxml2.FreeThreadedDOMDocument.4.0");
+var xslProc;
+xslDoc.async = false;
+xslDoc.load("producttable.xsl");
+xslt.stylesheet = xslDoc;
+var xmlDoc = new ActiveXObject("Msxml2.FreeThreadedDOMDocument.4.0");
+xmlDoc.async = false;
+xmlDoc.load("product.xml");
+xslProc = xslt.createProcessor();
+
+xslProc.input = xmlDoc;
+xslProc.transform();
+//alert(xslProc.output);
+parent.TOP.document.write(xslProc.output);
+}
+
+function displayList()
+{
+document.VIEW.optTable.checked=false;
+document.VIEW.optReset.checked=false;
+var xslt = new ActiveXObject("Msxml2.XSLTemplate.4.0");
+var xslDoc = new ActiveXObject("Msxml2.FreeThreadedDOMDocument.4.0");
+var xslProc;
+xslDoc.async = false;
+xslDoc.load("productlist.xsl");
+xslt.stylesheet = xslDoc;
+var xmlDoc = new ActiveXObject("Msxml2.DOMDocument.4.0");
+xmlDoc.async = false;
+xmlDoc.load("product.xml");
+xslProc = xslt.createProcessor();
+xslProc.input = xmlDoc;
+xslProc.transform();
+parent.TOP.document.write(xslProc.output);
+}
+
+function displayReset()
+{
+parent.TOP.document.location="top.htm";
+document.VIEW.optList.checked=false;
+document.VIEW.optTable.checked=false;
+}
+</script>
+</html>

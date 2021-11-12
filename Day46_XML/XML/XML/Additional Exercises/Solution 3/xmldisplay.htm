@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>XML</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="#FFFFFF">
+  <form name="frmPatient" method="post" action="">
+    <table width="41%" border="0">
+      <tr>
+      <td width="45%"><font face="Arial, Helvetica, sans-serif" size="2">Name 
+          of the XML File</font></td>
+        <td width="24%"> 
+          <input type="text" name="TxtName">
+        </td>
+        <td width="41%"><font size="2" face="Arial, Helvetica, sans-serif"><a href="#" onclick="javascript:cmdSubmit_click()">Submit</a></font></td>
+      </tr>
+    </table>
+  </form>
+  <p align="left">&nbsp;</p>
+<script Language="javascript">
+function cmdSubmit_click()
+{
+	if (frmPatient.TxtName.value.length==0)
+	{
+		alert ("Invalid File Name");
+	}
+	else
+	{
+	var xmldoc= new ActiveXObject("Msxml2.DOMDocument.4.0");    										xmldoc.load(frmPatient.TxtName.value);
+		var error=xmldoc.parseError;		
+		if(error!="")
+		{
+			alert("error");
+		}
+		else
+		{			
+			alert(xmldoc.xml);	
+		}
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+PRODUCTNAME
+{font-family:Arial;
+font-size:20pts;
+font-weight:bold;
+color:red;
+display:block;
+padding-top:6pt;
+padding-bottom:6pt
+}
+PRICE, DESCRIPTION ,QUANTITY
+{font-family:Arial;
+font-size:10pts;
+color:teal;
+display:block;
+padding-top:2pt;
+padding-bottom:2pt
+}

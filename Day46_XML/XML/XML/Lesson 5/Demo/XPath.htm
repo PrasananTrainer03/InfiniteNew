@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>XPATH - XSLT Learning Module</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#6699CC" text="#FFFFFF">
+<script Language="javascript">
+var transformedwindow;
+
+function doTransform()
+{
+if ((document.frmTransform.TxtXMLFileName.value).length == 0) 
+{
+	alert("Invalid XML FileName");
+	return;
+}
+
+if ((document.frmTransform.TxtXSLFileName.value).length == 0) 
+{
+	alert("Invalid XSL FileName");
+	return;
+}
+
+var xslt = new ActiveXObject("Msxml2.XSLTemplate.4.0");
+var xslDoc = new ActiveXObject("Msxml2.FreeThreadedDOMDocument.4.0");
+var xslProc;
+xslDoc.async = false;
+xslDoc.load(document.frmTransform.TxtXSLFileName.value);
+xslt.stylesheet = xslDoc;
+var xmlDoc = new ActiveXObject("Msxml2.DOMDocument.4.0");
+xmlDoc.async = false;
+xmlDoc.load(document.frmTransform.TxtXMLFileName.value);
+xslProc = xslt.createProcessor();
+
+xslProc.input = xmlDoc;
+xslProc.transform();
+transformedwindow=window.open('Transformed.htm','_new','location=0,status=1,toolbar=0,menuBar=0,scrollBars=0,directories=0,resizable=1,width=600,height=600');
+var tmpXMLOutput = xslProc.output;
+transformedwindow.document.write('<HTML><TITLE>Transformed Output</Title><BODY>'   + tmpXMLOutput + '</BODY></HTML>');
+
+}
+
+
+
+function doReset()
+{
+
+document.frmTransform.TxtXSLFileName.value="";
+document.frmTransform.TxtXMLFileName.value="";
+if (!(typeof transformedwindow == "undefined"))
+    transformedwindow.close();
+
+}
+
+</script>
+<p>&nbsp;</p>
+<p align="center"><font face="Verdana, Arial, Helvetica, sans-serif"><b><u>XSLT 
+  and XPATH Learning Module</u></b></font></p>
+<p>&nbsp;</p>
+<form name="frmTransform" method="post" action="">
+  <table width="75%" border="0" align="center">
+    <tr> 
+      <td> 
+        <div align="center"><b>Enter the XML File Name:</b></div>
+      </td>
+      <td> 
+        <input type="text" name="TxtXMLFileName">
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="#" onclick="javascript:doTransform()"> Transform</a></font> 
+      </td>
+    </tr>
+    <tr> 
+      <td> 
+        <div align="center"><b>Enter the XSL File Name:</b></div>
+      </td>
+      <td> 
+        <input type="text" name="TxtXSLFileName">
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="#" onclick="javascript:doReset()">Reset</a></font> 
+      </td>
+    </tr>
+    <tr> 
+      <td colspan="2"> 
+        <div align="left"></div>
+        <div align="left"></div>
+      </td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p>&nbsp; </p>
+  <p>&nbsp; </p>
+  <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"> </font></p>
+</form>
+</body>
+</html>

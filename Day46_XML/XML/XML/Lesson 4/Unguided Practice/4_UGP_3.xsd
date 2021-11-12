@@ -1,0 +1,67 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:element name="JOBDETAILS">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="JOB" type="jobinformation" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+	<xsd:complexType name="jobinformation">
+		<xsd:sequence>
+			<xsd:element name="COMPANYNAME" type="xsd:string"/>
+			<xsd:element name="JOBDESCRIPTION" type="xsd:string"/>
+			<xsd:element name="EXPERIENCE" type="xsd:nonNegativeInteger"/>
+			<xsd:element name="QUALIFICATION" type="qualificationtype"/>																		
+			<xsd:element name="CONTACTINFO" type="contactinfo"/>																														<xsd:element name="SALARY" type="xsd:positiveInteger"/>
+			<xsd:element name="JOBTYPE" type="jobtype"/>
+		</xsd:sequence>
+		<xsd:attribute name="JOBID" type="jobid" use="required"/>
+	</xsd:complexType>
+
+
+	<xsd:complexType name="qualificationtype">
+		<xsd:choice>
+			<xsd:element name="STRICTQUALIFICATION" type="strictqual" />
+			<xsd:element name="RELAXEDQUALIFICATION" type="relaxedqual" />
+		</xsd:choice>
+	</xsd:complexType>
+
+	
+	<xsd:complexType name="strictqual">
+		<xsd:group ref="strictqualref" />
+	</xsd:complexType>
+
+	<xsd:complexType name="relaxedqual">
+		<xsd:choice>
+			<xsd:element name="GRADUATE" type="xsd:string"/>
+			<xsd:element name="POSTGRADUATE" type="xsd:string"/>
+		</xsd:choice>
+	</xsd:complexType>
+
+	<xsd:group name="strictqualref">
+		<xsd:sequence>
+			<xsd:element name="GRADUATE" type="xsd:string"/>
+			<xsd:element name="POSTGRADUATE" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:group>
+
+	<xsd:simpleType name="jobid">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[J]\d{3}"/>
+		</xsd:restriction>
+
+	</xsd:simpleType>
+	<xsd:complexType name="contactinfo">
+		<xsd:choice>
+			<xsd:element name="EMAIL" type="xsd:string" />
+			<xsd:element name="ADDRESS" type="xsd:string" />
+		</xsd:choice>
+	</xsd:complexType>
+
+	<xsd:simpleType name="jobtype">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value= "(CONTRACT|PERMANENT)"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

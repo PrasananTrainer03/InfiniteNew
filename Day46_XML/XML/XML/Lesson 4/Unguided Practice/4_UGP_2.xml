@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<emp1:EMPLOYEEDETAILS xmlns:emp1="http://www.ecomatcybershoppe.com/employee">
+	<EMPLOYEE EMPID="E001">
+		<NAME>John</NAME>
+		<ADDRESS>12,</ADDRESS>
+		<DESIGNATION>Sales Executive</DESIGNATION>
+		<DEPARTMENT>Sales and Invoicing </DEPARTMENT>
+		<DATEOFJOINING>2001-03-29</DATEOFJOINING>
+	</EMPLOYEE>
+</emp1:EMPLOYEEDETAILS>

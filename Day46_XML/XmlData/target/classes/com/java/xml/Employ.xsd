@@ -1,0 +1,15 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="EMPLOYEES" type="complexTypeEmployees" />
+<xsd:complexType name="complexTypeEmployees">
+	<xsd:sequence>
+		<xsd:element name="EMPLOY" type="complexTypeEmploy" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="complexTypeEmploy">
+	<xsd:sequence>
+		<xsd:element name="EMPNO" type="xsd:positiveInteger"/>
+		<xsd:element name="NAME" type="xsd:string"/>
+		<xsd:element name="BASIC" type="xsd:positiveInteger"/>
+	</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>

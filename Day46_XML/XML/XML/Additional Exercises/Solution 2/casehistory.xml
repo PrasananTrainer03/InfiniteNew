@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?xml:stylesheet type="text/xsl" href="casehistory.xsl"?>
+<CASEHISTORY CASESHEETID="C001">
+	<PERSONALINFORMATION>
+		<NAME>John Watson</NAME>
+		<ADDRESS>
+			<HOUSENUMBER>24</HOUSENUMBER>
+			<STREET>Wellington Road</STREET>
+			<CITY>Seattle</CITY>
+			<STATE>Washington</STATE>
+			<ZIP>55555</ZIP>
+		</ADDRESS>
+		<GENDER>MALE</GENDER>
+		<AGE>10</AGE>
+		<EXISTINGDISEASES>Diabetes</EXISTINGDISEASES>
+	</PERSONALINFORMATION>
+	<CASEINFORMATION>
+		<VISITINFORMATION>
+			<DATE>2001-03-29</DATE>
+			<DOCTOR>Diane</DOCTOR>
+			<COMPLAIN>Injury to the left knee caused heavy bleeding</COMPLAIN>
+			<DIAGNOSIS>hematoma in left knee</DIAGNOSIS>
+			<PRESCRIPTION>bed rest and change dressing twice a week</PRESCRIPTION>
+			<NEXTDATEOFVISIT>2001-04-07</NEXTDATEOFVISIT>
+		</VISITINFORMATION>
+		<VISITINFORMATION>
+			<DATE>2001-04-07</DATE>
+			<DOCTOR>Diane</DOCTOR>
+			<COMPLAIN>Injury to the left knee caused heavy bleeding</COMPLAIN>
+			<DIAGNOSIS>hematoma in left knee</DIAGNOSIS>
+			<PRESCRIPTION>bed rest and change dressing twice a week</PRESCRIPTION>
+			<NEXTDATEOFVISIT>2001-04-14</NEXTDATEOFVISIT>
+		</VISITINFORMATION>
+	</CASEINFORMATION>
+</CASEHISTORY>

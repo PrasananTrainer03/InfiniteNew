@@ -1,0 +1,23 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="www.ecomatcybershop.com/purchase"
+xmlns:prd="www.ecomatcybershop.com/purchase">
+<include schemaLocation="3_D_2_a.xsd"/>
+<element name="PURCHASEORDER" type="prd:purord"/>
+<complexType name="purord">
+<sequence>
+<element name="ORDER" type="prd:ord"/>
+</sequence>
+<attribute name="PRODID" type="prd:prstring"/>
+<attribute name="ORDERID" type="prd:orstring" use="required"/>
+</complexType>
+<complexType name="ord">
+<sequence>
+<element name="DATE" type="date"/>
+<element name="PRODUCTNAME" type="string"/>
+<element name="SUPPLIERNAME" type="string"/>
+<element   name="ADDRESS" type="string"/>
+<element   name="QUANTITY" type="positiveInteger"/>
+<element   name="PRICEPERQTY"   type="positiveInteger"/>
+</sequence>
+</complexType>
+</schema>

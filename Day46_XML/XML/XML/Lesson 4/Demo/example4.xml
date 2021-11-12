@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<EMPLOYEE DEPARTMENT="Mktg" DESIGNATION="Mgr">
+	<FIRSTNAME> James </FIRSTNAME>
+	<LASTNAME> Wallace </LASTNAME>
+</EMPLOYEE>

@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>XML</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<form name="frmXMLFileName" method="post" action="">
+ <table width="60%" border="0">
+    <tr>
+     <td width="60%"><font face="Arial, Helvetica, sans-serif" 			size="2">Enter the XML 	FileName Here 
+      </font></td>
+	 </tr>
+	 <tr>
+       <td width="24%"> 
+	    <input type="text" name="TxtName">
+       </td>
+   	 </tr>
+	 <tr>
+       <td width="41%"><font size="2" face="Arial, Helvetica, 		sans-serif"><a href="#" 			onclick="javascript:cmdSubmit_click()">Submit</a></font></td>
+    </tr>
+  </table>
+</form>
+<p align="left">&nbsp;</p>
+<script Language="javascript">
+function cmdSubmit_click()
+{
+	var objelements;
+	if (frmXMLFileName.TxtName.value.length==0)
+	{
+		alert ("Invalid XML String");
+	}
+	else
+	{
+		var xmldoc= new ActiveXObject("Msxml2.DOMDocument.4.0");		xmldoc.load(frmXMLFileName.TxtName.value);
+		
+		var error=xmldoc.parseError;		
+		if(error!="")
+		{
+			alert("Error");
+		}
+		else
+		{
+			for(ctr=1;ctr<xmldoc.childNodes.length;ctr++)
+			{			
+		alert("Node Name: " + 						xmldoc.childNodes[ctr].nodeName);
+	alert("Node Type: " + xmldoc.childNodes[ctr].nodeTypeString);
+				
+				var objparentnode=xmldoc.childNodes[ctr];
+						for(ctr1=0;ctr1<objparentnode.childNodes.length;ctr1++)
+				{
+	
+		alert("Node Name: " + 				objparentnode.childNodes[ctr1].nodeName);
+
+		alert("Node Type: " + objparentnode.childNodes[ctr1].nodeTypeString);
+	
+		var objchildnode = objparentnode.childNodes[ctr1];				
+				for(ctr2=0;ctr2<objchildnode.childNodes.length;ctr2++)
+					{
+	alert("Node Value: " + objchildnode.childNodes[ctr2].nodeValue);
+
+					}
+				}
+			}
+		}
+	}
+}
+</script>
+</body>
+</html>

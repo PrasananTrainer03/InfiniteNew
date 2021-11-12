@@ -1,0 +1,21 @@
+<HTML>
+<HEAD> 
+<SCRIPT LANGUAGE="JavaScript">
+
+function LOADXML()
+{
+	var xmldoc=new ActiveXObject("Msxml2.DOMDocument.4.0");
+	xmldoc.async=false;
+	xmldoc.load("product.xml");
+	var xsldoc=new ActiveXObject("Msxml2.DOMDocument.4.0");
+	xsldoc.async=false;
+	xsldoc.load("productlist.xsl");
+	x.innerHTML = xmldoc.transformNode(xsldoc);
+}
+</SCRIPT>
+</HEAD>
+<BODY onload="LOADXML()">
+<div id="x">
+</div>
+</BODY>
+</HTML>

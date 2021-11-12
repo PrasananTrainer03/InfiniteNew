@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>XML</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="#FFFFFF">
+	<form name="frmXMLFileName" method="post" action="">
+    <table width="60%" border="0">
+      <tr>
+<td width="60%"><font face="Arial, Helvetica, sans-serif" size="2">Enter the XML 	FileName Here 
+</font></td>
+</tr>
+<tr>
+<td width="24%"> 
+	<input type="text" name="TxtName">
+</td>
+</tr>
+<tr>
+	<td width="41%"><font size="2" face="Arial, Helvetica, sans-serif">
+	<a href="#" 	onclick="javascript:cmdSubmit_click()">Submit</a></font></td>
+</tr>
+</table>
+</form>
+<p align="left">&nbsp;</p>
+
+<script Language="javascript">
+function cmdSubmit_click()
+{
+	var objelements;
+
+	if (frmXMLFileName.TxtName.value.length==0)
+	{
+		alert ("Invalid XML String");
+	}
+	else
+	{
+		var xmldoc= new ActiveXObject("Msxml2.DOMDocument.4.0");    		xmldoc.load(frmXMLFileName.TxtName.value);
+		var error=xmldoc.parseError;		
+		if(error!="")
+		{
+			alert("Error");
+		}
+		else
+		{
+		objelements=xmldoc.getElementsByTagName("CUSTOMERNAME");		for(ctr=0;ctr<=objelements.length;ctr++)
+		{
+			if (objelements[ctr].text=="Harold Johnson")
+			{
+			objelements=xmldoc.getElementsByTagName("ADDRESS");
+				objelements[ctr].text="94, McFarlane 					Avenue";
+							objelements=xmldoc.getElementsByTagName("PHONE");
+				objelements[ctr].text="412-233-2344";					
+				alert(xmldoc.xml);
+				break;
+			}
+		}
+		}
+	}
+}
+</script>
+</body>
+</html>

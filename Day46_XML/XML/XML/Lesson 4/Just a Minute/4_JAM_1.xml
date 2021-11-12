@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<BOOKS>
+	<BOOK>
+		<TITLE> If Tomorrow Comes </TITLE>
+		<AUTHOR>
+			<FIRSTNAME> Sydney </FIRSTNAME>
+			<LASTNAME> Sheldon </LASTNAME>
+		</AUTHOR>
+		<PRICE> 20 </PRICE>
+	</BOOK>
+	<BOOK>
+		<TITLE> The Client </TITLE>
+		<AUTHOR>
+				<NAME> John Grisham </NAME>
+		</AUTHOR>
+		<PRICE> 20 </PRICE>
+	</BOOK>
+</BOOKS>

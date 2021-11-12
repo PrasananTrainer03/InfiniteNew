@@ -1,0 +1,17 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="EMPLOYEE" type="emptype"/>
+<xsd:complexType name="emptype">
+<xsd:group ref="empname"/>
+<xsd:attributeGroup ref="depdesig"/>
+</xsd:complexType>
+<xsd:group name="empname">
+<xsd:sequence>
+<xsd:element name="FIRSTNAME" type="xsd:string"/>
+<xsd:element name="LASTNAME" type="xsd:string"/>
+</xsd:sequence>
+</xsd:group>
+<xsd:attributeGroup name="depdesig">
+<xsd:attribute name="DEPARTMENT" type="xsd:string"/>
+<xsd:attribute name="DESIGNATION" type="xsd:string"/>
+</xsd:attributeGroup>
+</xsd:schema>

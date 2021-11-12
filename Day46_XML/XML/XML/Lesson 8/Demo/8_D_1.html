@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>Untitled Document</title>
+</head>
+<body bgcolor="#6699CC" text="#FFFFFF" vLink="Yellow" >
+<script Language="javascript">
+var transformedwindow;
+function doValidate()
+{
+if ((document.frmTransform.TxtXMLFileName.value).length == 0) 
+{
+alert("Invalid XML FileName");
+return;
+}
+if ((document.frmTransform.TxtXSDFileName.value).length == 0) 
+{
+alert("Invalid XSD FileName");
+return;
+}
+var xmlDoc = new ActiveXObject("Msxml2.FreeThreadedDomDocument.4.0");
+xmlDoc.async = false;
+xmlDoc.load(document.frmTransform.TxtXMLFileName.value);
+var namespace=xmlDoc.documentElement.namespaceURI;
+xmlDoc.validateOnParse=true
+var xsdschemacache = new ActiveXObject("Msxml2.XMLSchemaCache.4.0");
+xsdschemacache.add(namespace,document.frmTransform.TxtXSDFileName.value);
+xmlDoc.schemas=xsdschemacache;
+xmlDoc.load(document.frmTransform.TxtXMLFileName.value);
+var error=xmlDoc.parseError;
+transformedwindow=window.open('Transformed.htm','_new','location=0,status=1,toolbar=0,menuBar=0,scrollBars=0,directories=0,resizable=0,width=600,height=600');
+if(error!="")
+{
+ transformedwindow.document.write('<HTML><TITLE>Schema Validator</Title><BODY><P><b>Error Validating the document</b></p><br>');
+     transformedwindow.document.write('<b>Error URL: </b><br>' + error.url + '<br>');
+     transformedwindow.document.write('<b>Error Line: </b><br>' + error.line + '<br>');
+     transformedwindow.document.write('<b>Error Position: </b><br>' + error.linepos + '<br>');
+     transformedwindow.document.write('<b>Error Reason: </b><br>' + error.reason + '<br>');   
+     transformedwindow.document.write('</BODY></HTML>');
+}
+else
+{
+	transformedwindow.document.write('<HTML><TITLE>Schema Validator</Title><BODY><b>No Error </b><br>');
+transformedwindow.document.write('</BODY></HTML>');
+ }
+}
+function doReset()
+{
+document.frmTransform.TxtXSDFileName.value="";
+document.frmTransform.TxtXMLFileName.value="";
+if (!(typeof transformedwindow == "undefined"))
+    transformedwindow.close();
+}
+</script>
+<p>&nbsp;</p>
+<p align="center"><font face="Verdana, Arial, Helvetica, sans-serif"><b><u>XML - Schema Validator Module 
+</u></b></font></p>
+<p>&nbsp;</p>
+<form name="frmTransform" method="post" action="">
+  <table width="75%" border="0" align="center">
+    <tr> 
+      <td> 
+        <div align="center"><b>Enter the XML File Name:</b></div>
+      </td>
+      <td> 
+        <input type="text" name="TxtXMLFileName">
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="#" onclick="javascript:doValidate()">Validate</a></font> 
+      </td>
+    </tr>
+    <tr> 
+      <td> 
+        <div align="center"><b>Enter the XSD File Name:</b></div>
+      </td>
+      <td> 
+        <input type="text" name="TxtXSDFileName">
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="#" onclick="javascript:doReset()">Reset</a></font> 
+      </td>
+    </tr>
+    <tr> 
+      <td colspan="2"> 
+        <div align="left"></div>
+        <div align="left"></div>
+      </td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p>&nbsp; </p>
+  <p>&nbsp; </p>
+  <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2"> </font></p>
+</form>
+</body>
+</html>
