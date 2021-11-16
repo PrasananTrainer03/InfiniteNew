@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="Product.css"?>
+<PRODUCTDATA>
+<PRODUCT PRODID="P001" CATEGORY="Toy">
+<PRODUCTNAME>Mini Bus</PRODUCTNAME>
+<DESCRIPTION>This is a toy for children aged 4 and above</DESCRIPTION>
+<PRICE>75</PRICE>
+<QUANTITY>54</QUANTITY>
+</PRODUCT>
+<PRODUCT PRODID="P002" CATEGORY="Toy">
+<PRODUCTNAME>Barbie Doll</PRODUCTNAME>
+<DESCRIPTION>This toy is for children in the age group of 5-10</DESCRIPTION>
+<PRICE>20</PRICE>
+<QUANTITY>200</QUANTITY>
+</PRODUCT>
+</PRODUCTDATA>
